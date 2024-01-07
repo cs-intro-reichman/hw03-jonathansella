@@ -2,7 +2,8 @@
 public class LowerCase {
     public static void main(String[] args) {  
         String str = args[0];
-        System.out.println(lowerCase(str));
+        int length = str.length();
+        System.out.println(lowerCase(str, length));
     }
 
    /**
@@ -10,8 +11,17 @@ public class LowerCase {
     * except that all the upper-case letters are converted to lower-case letters.
     * Non-letter characters are left as is.
     */
-    public static String lowerCase(String s) {
-        // Replace the following statement with your code
-        return null;
+    public static String lowerCase(String s, int length) {
+       String output = "";
+        int i = length;
+        for (int index = 0; index < length; index++) {
+           if (65<=s.charAt(index) && s.charAt(index)<=90) {
+            output = output + (char)(s.charAt(index) + 32);
+           } else {
+            output = output + s.charAt(index);
+            } 
+           }   
+
+        return output;
     }
 }
