@@ -13,7 +13,6 @@ public class LowerCase {
     */
     public static String lowerCase(String s, int length) {
        String output = "";
-        int i = length;
         for (int index = 0; index < length; index++) {
            if (65<=s.charAt(index) && s.charAt(index)<=90) {
             output = output + (char)(s.charAt(index) + 32);
